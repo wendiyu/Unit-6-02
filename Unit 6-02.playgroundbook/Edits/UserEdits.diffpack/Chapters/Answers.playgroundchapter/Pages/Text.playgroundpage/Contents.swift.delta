@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Created on : Dec 2018
+// Created by: Wendi Yu 
+// Created for: ICS3U
+// This program uses enumerated types
+
+// crete variable type
+import Foundation
+
+
+enum DayOfWeek : String {
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+    case sunday
+    
+    var daysNumber: Int {
+        switch self {
+        case .sunday: return 1
+        case .monday: return 2
+        case .tuesday: return 3
+        case .wednesday: return 4
+        case .thursday: return 5
+        case .friday: return 6
+        case .saturday: return 7
+        }
+    }
+}
+
+show("Enter you favourite day of the week.")
+if var input = DayOfWeek(rawValue: ask("Enter a day").lowercased()){
+    show("Your favourite day is \(input)")
+    show("Its number is \(input.daysNumber)")
+} 
+else {
+    show("That is not a day of the week")
+}
+</string>
+			<key>ModifiedRange</key>
+			<string>{145, 854}</string>
+			<key>OriginalContent</key>
+			<string>show("What is your name?")
+
+let name = ask("Name")
+
+show("Hi " + name)
+
+</string>
+			<key>OriginalRange</key>
+			<string>{145, 72}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Answers.playgroundchapter/Pages/Text.playgroundpage/Contents.swift</string>
+</dict>
+</plist>
